@@ -25,6 +25,7 @@ html {
 body {
   font-family: "FF-Bau", "Helvetica Neue", helvetica, arial, sans-serif;
   max-width: 500px;
+  background-color: transparent;
 }
 
 header #top-bar {
