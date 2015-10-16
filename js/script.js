@@ -27,6 +27,18 @@ $(document).ready(function() {
       $("nav").slideToggle();
    });
 
+   $(".arrow").click(function(){
+     $(this).toggleClass('direction');
+     $('.question, .highlight, form').slideToggle("slow", 'linear');
+     //$('.text').toggleClass('close');
+   });
+
+   $('.top-bar').click(function() {
+      $('.map-trace').toggleClass('adjust-height');
+      $('#compass-pointer').toggle("slow");
+      $('#expand').toggle("slow");
+   });
+
 });
 
 $("input").keypress(function(e) {
