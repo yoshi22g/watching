@@ -96,7 +96,18 @@ main #progress-bar {
   margin: 0;
   padding: 0 5%;
   box-sizing: border-box;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
   display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
   justify-content: space-between;
 }
 main #progress-bar li {
@@ -243,6 +254,11 @@ main #progress-bar .selected .circle {
 }
 
 .direction {
+  -webkit-transform: rotate(180deg);
+  /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  /* IE 9 */
   transform: rotate(180deg);
 }
 
