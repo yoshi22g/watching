@@ -34,6 +34,14 @@ header #top-bar {
   /* 80px/1136px*/
   background-color: #A0832F;
   overflow: auto;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
   display: flex;
 }
 header #top-bar .hamburger {
@@ -140,7 +148,7 @@ main #progress-bar .selected .circle {
   transition: all 1s ease-in-out;
 }
 .text .question {
-  font-weight: bold;
+  font-weight: normal;
   font-size: 1em;
   line-height: 1.4em;
   letter-spacing: 0.01em;
@@ -153,6 +161,8 @@ main #progress-bar .selected .circle {
 }
 .text form input[type=text] {
   width: 64.3%;
+  border-radius: 0%;
+  border: 1px solid #9D9D9D;
 }
 .text form button {
   color: white;
