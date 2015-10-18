@@ -30,7 +30,7 @@ $(document).ready(function() {
    $("html").css("background", "url(img/"+($clue + 1)+".jpg) no-repeat center center fixed").css("background-size","contain");
    }
 
-   $.get( "../data/questions.txt"), function(data) {
+   $.get("../data/questions.txt"), function(data) {
       questionArray = data.split('\n');
       console.log(data);
    };
