@@ -3,7 +3,10 @@ var answers = [24, 11, "sargent", 10, 11, 5, "black", 10, "elkay", 2, 1936, 26, 
 
 //get the questions from txt file
 var questionArray;
-
+$.get("../data/questions.txt", function(data) {
+      questionArray = data.split('\n');
+      console.log(data);
+   });
 
 //split the questions into an array
 //console.log(questionArray);
@@ -30,10 +33,7 @@ $(document).ready(function() {
    $("html").css("background", "url(img/"+($clue + 1)+".jpg) no-repeat center center fixed").css("background-size","contain");
    }
 
-   $.get("../data/questions.txt"), function(data) {
-      questionArray = data.split('\n');
-      console.log(data);
-   };
+
 
    /*
    //animate the path image
