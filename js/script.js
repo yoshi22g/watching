@@ -66,8 +66,9 @@ $(document).ready(function() {
 
 //when user submits answer
 $("input").keypress(function(e) {
-    e.preventDefault();
+
     if(e.which == 13) {
+      e.preventDefault();
       handleAnswer();
     }
 });
