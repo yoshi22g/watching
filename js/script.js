@@ -1,11 +1,16 @@
 var answers = [24, 11, "sargent", 10, 11, 5, "black", 10, "elkay", 2, 1936, 26, 5, 24, "red", 4848, 3, "sure-lites", 33, "picture"];
 
+/*
 //get the questions from txt file
 var allQuestions = toString($.get( "../data/questions.txt"));
 
 //split the questions into an array
 var questionArray = allQuestions.split('\n');
 console.log(questionArray);
+*/
+
+var questionArray = ['You just missed him near the AED around the corner. He was going to shock you, but failed. <span class="highlight">How many times did he try?</span> <br>Hint: find an hourglass, it will tell you a two digit number.','Turn around. He tried to watch you from Teaching and Learning department. but the door was locked. <span class="highlight">What company manufactured the lock?</span> <br>Hint: Similar spelling to a military officer.']
+
 
 //get the clue number
 var $clue = $(".selected").index();
