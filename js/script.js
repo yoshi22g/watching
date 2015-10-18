@@ -56,6 +56,7 @@ $(document).ready(function() {
 //when user submits answer
 $("input").keypress(function(e) {
     if(e.which == 13) {
+      e.preventDefault();
        //get answer
        var $answer = $("input").val();
 
@@ -96,7 +97,7 @@ $("input").keypress(function(e) {
 
        //if answer is incorrect
        } else {
-          //e.preventDefault();
+          e.preventDefault();
           $(".error").hide();
           $(".text").append("<p class='error'>Nope, not "+$answer+", try again!</p>");
        }
@@ -119,8 +120,8 @@ function checkAnswer(answer) {
    }
 
 }
-
+/*
 function splitString(stringToSplit, separator) {
   var arrayOfStrings = stringToSplit.split(separator);
   return arrayOfStrings;
-}
+}*/
