@@ -60,7 +60,7 @@ $("input").keypress(function(e) {
 
        //if answer is correct
        if (checkAnswer($answer)) {
-
+         console.log('user answer was '+$answer+'. That is correct.');
           //advance to the next clue number
           $clue++;
 
