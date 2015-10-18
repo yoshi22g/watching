@@ -3,13 +3,10 @@ var answers = [24, 11, "sargent", 10, 11, 5, "black", 10, "elkay", 2, 1936, 26, 
 
 //get the questions from txt file
 var questionArray;
-$.get( "../data/questions.txt"), function(data) {
-  questionArray = data.split('\n');
-  console.log(data);
-};
+
 
 //split the questions into an array
-console.log(questionArray);
+//console.log(questionArray);
 
 
 /*var questionArray = ['You see the stairs over there? Before you could spot him, your observer dashed up the stairwell. <span class="highlight">How many steps</span> did he climb to avoid you? </br>Hint: consult some braille.','You just missed him near the AED around the corner. He was going to shock you, but failed. <span class="highlight">How many times did he try?</span> <br>Hint: find an hourglass, it will tell you a two digit number.','Turn around. He tried to watch you from Teaching and Learning department. but the door was locked. <span class="highlight">What company manufactured the lock?</span> <br>Hint: Similar spelling to a military officer.']*/
@@ -24,6 +21,7 @@ console.log($clue);
 
 $(document).ready(function() {
 
+
    //set the background image
    if ($clue !== 20) {
    $("html").css("background", "url(img/"+($clue + 1)+".svg) no-repeat center center fixed");
@@ -31,6 +29,11 @@ $(document).ready(function() {
    else {
    $("html").css("background", "url(img/"+($clue + 1)+".jpg) no-repeat center center fixed").css("background-size","contain");
    }
+
+   $.get( "../data/questions.txt"), function(data) {
+      questionArray = data.split('\n');
+      console.log(data);
+   };
 
    /*
    //animate the path image
