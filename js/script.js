@@ -121,7 +121,7 @@ function handleAnswer() {
 
       //change to new question
       var questionText = questionArray[$clue];
-      console.log(questionText);
+      //console.log(questionText);
       $(".question").html(questionText);
 
       //advance the progress bar
