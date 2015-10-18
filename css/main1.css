@@ -98,6 +98,18 @@ header nav ul li {
   /* 12.5px/16px = .783 */
   font-weight: normal;
 }
+header nav ul li a:link {
+  text-decoration: none;
+}
+header nav ul li a:visited {
+  color: inherit;
+}
+header nav ul li a:hover {
+  color: #8500A5;
+}
+header nav ul li a:active {
+  color: #8500A5;
+}
 
 main #progress-bar {
   width: 100%;

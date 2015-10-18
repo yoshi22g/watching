@@ -116,6 +116,20 @@ header {
         font-size: 0.94rem; /* 36px/16px = 2.25 */
         margin-bottom: 0.78rem; /* 12.5px/16px = .783 */
         font-weight: normal;
+
+        a:link {
+          text-decoration: none;
+        }
+        a:visited {
+          color: inherit;
+        }
+        a:hover {
+          color: $active;
+        }
+        a:active {
+          color: $active;
+        }
+
       }
     }
 
