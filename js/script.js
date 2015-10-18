@@ -74,7 +74,7 @@ $("input").keypress(function(e) {
 
 $("button").click(function() {
   handleAnswer();
-}
+});
 
 function checkAnswer(answer) {
    var myAnswer = answer
