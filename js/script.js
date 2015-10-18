@@ -1,15 +1,17 @@
 var answers = [24, 11, "sargent", 10, 11, 5, "black", 10, "elkay", 2, 1936, 26, 5, 24, "red", 4848, 3, "sure-lites", 33, "picture"];
 
-/*
+
 //get the questions from txt file
-var allQuestions = toString($.get( "../data/questions.txt"));
+var questionArray;
+$.get( "../data/questions.txt"), function(data) {
+  questionArray = data.split('\n');
+});
 
 //split the questions into an array
-var questionArray = allQuestions.split('\n');
 console.log(questionArray);
-*/
 
-var questionArray = ['You just missed him near the AED around the corner. He was going to shock you, but failed. <span class="highlight">How many times did he try?</span> <br>Hint: find an hourglass, it will tell you a two digit number.','Turn around. He tried to watch you from Teaching and Learning department. but the door was locked. <span class="highlight">What company manufactured the lock?</span> <br>Hint: Similar spelling to a military officer.']
+
+/*var questionArray = ['You see the stairs over there? Before you could spot him, your observer dashed up the stairwell. <span class="highlight">How many steps</span> did he climb to avoid you? </br>Hint: consult some braille.','You just missed him near the AED around the corner. He was going to shock you, but failed. <span class="highlight">How many times did he try?</span> <br>Hint: find an hourglass, it will tell you a two digit number.','Turn around. He tried to watch you from Teaching and Learning department. but the door was locked. <span class="highlight">What company manufactured the lock?</span> <br>Hint: Similar spelling to a military officer.']*/
 
 
 //get the clue number
@@ -65,6 +67,9 @@ $("input").keypress(function(e) {
        //get answer
        var $answer = $("input").val();
 
+       //set input field back to default and no focus
+       $("input").val('').blur();
+
        //if answer is correct
        if (checkAnswer($answer)) {
          console.log('user answer was '+$answer+'. That is correct.');
@@ -88,7 +93,7 @@ $("input").keypress(function(e) {
           $("#progress-bar li").eq($clue).addClass("selected");
 
           //Replace the Clue Number in the Page Header
-          $(".clue-number").text($clue);
+          $(".clue-number").text($clue+1);
 
           //Hide Error Message if it exists
           $(".error").hide();
@@ -104,7 +109,7 @@ $("input").keypress(function(e) {
        } else {
           e.preventDefault();
           $(".error").hide();
-          $(".text").append("<p class='error'>Nope, not "+$answer+", try again!</p>");
+          $("form").after("<p class='error'>Nope, not "+$answer+", try again!</p>");
        }
     }
 });
