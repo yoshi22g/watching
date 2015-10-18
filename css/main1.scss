@@ -23,6 +23,7 @@ $grey-trans: rgba(140, 137, 132, .7);
 $grey: rgb(140, 137, 132);
 $input-color: #9D9D9D;
 $active: #8500A5;
+$error: #EC3092 
 //font stacks
 $font1: 'FF-Bau', 'Helvetica Neue', helvetica, arial, sans-serif;  
 
@@ -278,7 +279,7 @@ main {
 
 
 .error {
-   color: rgba(255,0,0,0.7);
+   color: $error;
 }
 
 
