@@ -5,6 +5,7 @@ var answers = [24, 11, "sargent", 10, 11, 5, "black", 10, "elkay", 2, 1936, 26, 
 var questionArray;
 $.get( "../data/questions.txt"), function(data) {
   questionArray = data.split('\n');
+  console.log(data);
 };
 
 //split the questions into an array
