@@ -66,57 +66,15 @@ $(document).ready(function() {
 
 //when user submits answer
 $("input").keypress(function(e) {
+    e.preventDefault();
     if(e.which == 13) {
-      e.preventDefault();
-       //get answer
-       var $answer = $("input").val();
-
-       //set input field back to default and no focus
-       $("input").val('').blur();
-
-       //if answer is correct
-       if (checkAnswer($answer)) {
-         console.log('user answer was '+$answer+'. That is correct.');
-          //advance to the next clue number
-          $clue++;
-
-          //change to new background image
-          if ($clue !== 20) {
-             $("html").css("background", "url(img/"+($clue+1)+".svg) no-repeat center center fixed");
-          } else {
-             $("html").css("background", "url(img/"+($clue+1)+".jpg) no-repeat center center fixed").css("background-size","contain");
-          }
-
-          //change to new question
-          var questionText = questionArray[$clue];
-          console.log(questionText);
-          $(".question").html(questionText);
-
-          //advance the progress bar
-          $("#progress-bar li").removeClass("selected");
-          $("#progress-bar li").eq($clue).addClass("selected");
-
-          //Replace the Clue Number in the Page Header
-          $(".clue-number").text($clue+1);
-
-          //Hide Error Message if it exists
-          $(".error").hide();
-
-
-
-        /*
-         window.open("http://students.risd.edu/students/odoshi/bigger/"+($page+1)+".html");
-         //window.location.replace("http://stackoverflow.com");*/
-         return false;
-
-       //if answer is incorrect
-       } else {
-          e.preventDefault();
-          $(".error").hide();
-          $("form").after("<p class='error'>Nope, not "+$answer+", try again!</p>");
-       }
+      handleAnswer();
     }
 });
+
+$("button").click(function() {
+  handleAnswer();
+}
 
 function checkAnswer(answer) {
    var myAnswer = answer
@@ -139,3 +97,53 @@ function splitString(stringToSplit, separator) {
   var arrayOfStrings = stringToSplit.split(separator);
   return arrayOfStrings;
 }*/
+
+function handleAnswer() {
+   //get answer
+   var $answer = $("input").val();
+
+   //set input field back to default and no focus
+   $("input").val('').blur();
+
+   //if answer is correct
+   if (checkAnswer($answer)) {
+     console.log('user answer was '+$answer+'. That is correct.');
+      //advance to the next clue number
+      $clue++;
+
+      //change to new background image
+      if ($clue !== 20) {
+         $("html").css("background", "url(img/"+($clue+1)+".svg) no-repeat center center fixed");
+      } else {
+         $("html").css("background", "url(img/"+($clue+1)+".jpg) no-repeat center center fixed").css("background-size","contain");
+      }
+
+      //change to new question
+      var questionText = questionArray[$clue];
+      console.log(questionText);
+      $(".question").html(questionText);
+
+      //advance the progress bar
+      $("#progress-bar li").removeClass("selected");
+      $("#progress-bar li").eq($clue).addClass("selected");
+
+      //Replace the Clue Number in the Page Header
+      $(".clue-number").text($clue+1);
+
+      //Hide Error Message if it exists
+      $(".error").hide();
+
+
+
+    /*
+     window.open("http://students.risd.edu/students/odoshi/bigger/"+($page+1)+".html");
+     //window.location.replace("http://stackoverflow.com");*/
+     return false;
+
+   //if answer is incorrect
+   } else {
+
+      $(".error").hide();
+      $("form").after("<p class='error'>Nope, not "+$answer+", try again!</p>");
+   }
+}
