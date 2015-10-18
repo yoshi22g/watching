@@ -54,7 +54,7 @@ $(document).ready(function() {
 
 //when user submits answer
 $("input").keypress(function(e) {
-    if(e.keycode == 13) {
+    if(e.which == 13) {
        //get answer
        var $answer = $("input").val();
 
