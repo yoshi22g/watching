@@ -175,6 +175,11 @@ main #progress-bar .selected .circle {
   box-sizing: border-box;
   padding-top: 4px;
 }
+.text form button:active {
+  color: white;
+  background-color: #8500A5;
+  border: none;
+}
 .text .arrow {
   width: 0;
   height: 0;
@@ -261,7 +266,7 @@ main #progress-bar .selected .circle {
 }
 
 .green {
-  background-color: lime;
+  background-color: lime !important;
 }
 
 .direction {

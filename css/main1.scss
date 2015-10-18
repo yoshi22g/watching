@@ -22,6 +22,7 @@ $green: rgb(0,255,0);
 $grey-trans: rgba(140, 137, 132, .7);
 $grey: rgb(140, 137, 132);
 $input-color: #9D9D9D;
+$active: #8500A5;
 //font stacks
 $font1: 'FF-Bau', 'Helvetica Neue', helvetica, arial, sans-serif;  
 
@@ -42,7 +43,7 @@ html {
 body {
    font-family: $font1;
    max-width: 500px;
-   background-color: transparent;
+   background-color: black;
 }
 
 header {
@@ -207,6 +208,12 @@ main {
       box-sizing: border-box;
       padding-top: 4px;
     }
+
+    button:active {
+      color: white;
+      background-color: $active;
+      border: none;
+    }
   }
 
   .arrow {
@@ -310,7 +317,7 @@ main {
 }
 
 .green {
-  background-color: $green;
+  background-color: $green !important;
 }
 
 .direction {
