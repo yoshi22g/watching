@@ -1,10 +1,10 @@
 var answers = [24, 11, "sargent", 10, 11, 5, "black", 10, "elkay", 2, 1936, 26, 5, 24, "red", 4848, 3, "sure-lites", 33, "picture"];
 
 //get the questions from txt file
-var allQuestions = $.get( "../data/questions.txt");
+var allQuestions = toString($.get( "../data/questions.txt"));
 
 //split the questions into an array
-var questionArray = splitString(allQuestions, '\n');
+var questionArray = allQuestions.split('\n');
 
 //get the clue number
 var $clue = $(".selected").index();
@@ -17,10 +17,10 @@ $(document).ready(function() {
 
    //set the background image
    if ($clue !== 20) {
-   $("html").css("background", "url(img/"+$clue+".svg) no-repeat center center fixed");
+   $("html").css("background", "url(img/"+($clue + 1)+".svg) no-repeat center center fixed");
    }
    else {
-   $("html").css("background", "url(img/"+$clue+".jpg) no-repeat center center fixed").css("background-size","contain");
+   $("html").css("background", "url(img/"+($clue + 1)+".jpg) no-repeat center center fixed").css("background-size","contain");
    }
 
    /*
@@ -66,9 +66,9 @@ $("input").keypress(function(e) {
 
           //change to new background image
           if ($clue !== 20) {
-             $("html").css("background", "url(img/"+$clue+".svg) no-repeat center center fixed");
+             $("html").css("background", "url(img/"+($clue+1)+".svg) no-repeat center center fixed");
           } else {
-             $("html").css("background", "url(img/"+$clue+".jpg) no-repeat center center fixed").css("background-size","contain");
+             $("html").css("background", "url(img/"+($clue+1)+".jpg) no-repeat center center fixed").css("background-size","contain");
           }
 
           //change to new question
@@ -95,7 +95,7 @@ $("input").keypress(function(e) {
 
        //if answer is incorrect
        } else {
-          e.preventDefault();
+          //e.preventDefault();
           $(".error").hide();
           $(".text").append("<p class='error'>Nope, not "+$answer+", try again!</p>");
        }
