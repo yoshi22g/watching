@@ -5,6 +5,7 @@ var allQuestions = toString($.get( "../data/questions.txt"));
 
 //split the questions into an array
 var questionArray = allQuestions.split('\n');
+console.log(questionArray);
 
 //get the clue number
 var $clue = $(".selected").index();
