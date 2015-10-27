@@ -73,7 +73,7 @@ $("input").keypress(function(e) {
     }
 });
 
-$("button").click(function() {
+$("form button").click(function() {
   handleAnswer();
 });
 

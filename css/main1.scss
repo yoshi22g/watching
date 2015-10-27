@@ -346,3 +346,118 @@ main {
 .close {
   top: -87.5%;
 }
+
+
+/**** Home Screen ***/
+
+main > h1 {
+  font-size: 3.82rem;
+  color: $gold;
+  text-align: center;
+  margin-top: 7%; 
+  margin-bottom: 7%;
+  font-weight: bold;
+
+  span.dotted {
+    border: 2px dotted $gold;
+    display: block;
+    margin:0;
+    position: absolute;
+    color: $gold;
+   -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: $gold;
+    //text-decoration-style: dotted;
+    font-size: 2rem;
+    padding: 0.25rem;
+    
+    &:first-of-type {
+      top: 22%;
+      left: 6.25%;
+      z-index: 20;
+      -webkit-transform: rotate(-7deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+         -moz-transform: rotate(-7deg);
+          -ms-transform: rotate(-7deg); /* IE 9 */
+              transform: rotate(-7deg);
+    }
+
+    &:last-child {
+      display: inline-block;
+      position: relative;
+      z-index: 20;
+      -webkit-transform: rotate(10deg); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+         -moz-transform: rotate(10deg);
+          -ms-transform: rotate(10deg); /* IE 9 */
+              transform: rotate(10deg);
+    }
+  }
+
+}
+
+#home-menu {
+
+  text-align: center;
+
+}
+  
+button.non-game {
+  box-sizing: border-box;
+  width: 87.5%;
+  height: 2.75rem;
+  background-color: $green;
+  border-top: none;
+  border-left: none;
+  border-right: 2px solid $gold;
+  border-bottom: 2px solid $gold;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-bottom: 0.625rem;
+  padding-top: 0.5rem;
+
+  &:link {
+    background-color: $green;
+    text-decoration: none;
+    color: white;
+  }
+
+  &:hover {
+    background-color: $active;
+    color: black;
+    border-right-color: black;
+    border-bottom-color: black;
+  }
+
+  &:visited {
+    background-color: $green;
+    color: black;
+  }
+
+  &:active {
+    background-color: $active;
+    color: black;
+    border-right-color: black;
+    border-bottom-color: black;
+  }
+
+  a {
+    color: inherit;
+  }
+
+}
+
+/**** Instructions Page *****/
+#instructions-text {
+   font-weight: normal;
+   font-size: 1rem;
+   line-height: 1.4em;
+   letter-spacing: 0.01em;
+   color: white;
+   padding: 0 6%;
+ }
+
+ #start {
+  margin: 1rem 6%;
+ }
+

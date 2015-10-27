@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Someone is Watching You. Now. In This Lobby.</title>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="css/main1.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body ontouchstart="">
+    <header>
+      <div id="top-bar">
+        <div class="hamburger">
+          <div class="ham-rect"></div>
+          <div class="ham-rect"></div>
+          <div class="ham-rect"></div>
+        </div>
+
+        <h1>Clue #<span class="clue-number">1</span></h1>
+      </div>
+      <nav>
+        <h1>Someone is Watching You. Now. In this Lobby</h1>
+        <ul>
+          <li><a href="index.html">Start Over</a></li>
+          <li>About</li>
+          <li>Design Your Own</li>
+          <li>Gallery</li>
+        </ul>
+      </nav>
+    </header>
+    <main class="clear">
+      <!-- progress bar -->
+      <ol id="progress-bar">
+        <li class="selected"><div class="circle"></div></li>
+        <li><div class="circle"></li>
+        <li><div class="circle"></li>
+        <li><div class="circle"></li>
+        <li><div class="circle"></li>
+        <li><div class="circle"></li>
+        <li><div class="circle"></li>
+        <li><div class="circle"></li>
+        <li><div class="circle"></li>
+        <li><div class="circle"></li>
+        <li><div class="circle"></li>
+        <li><div class="circle"></li>
+        <li><div class="circle"></li>
+        <li><div class="circle"></li>
+        <li><div class="circle"></li>
+        <li><div class="circle"></li>
+        <li><div class="circle"></li>
+        <li><div class="circle"></li>
+        <li><div class="circle"></li>
+        <li><div class="circle"></li>
+        <li><div class="circle"></li>
+      </ol>
+      <!-- main clue text and form input -->
+      <div class="text">
+        <p class="question">You see the stairs over there? Before you could spot him, your observer dashed up the stairwell. <span class="highlight">How many steps</span> did he climb to avoid you? </br>Hint: consult some braille.</p>
+        <form>
+          <input type="text" name="input">
+          <button type="button">SUBMIT</button>
+        </form>
+        <div class="arrow"></div>
+      </div>
+
+      <!-- map tracing -->
+      <div class="map-trace">
+        <div class="top-bar">
+          <p>YOU ARE HERE <span id="expand"> — </span></p>
+          <!--div class="expand">
+            <img id="minus">
+          </div-->
+        </div>
+        <img class="clear" id="compass-pointer" src="img/arrow.svg">
+      </div>
+    </main>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
