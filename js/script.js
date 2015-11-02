@@ -116,7 +116,9 @@ function handleAnswer() {
       if ($clue !== 20) {
          $("html").css("background", "url(img/"+($clue+1)+".svg) no-repeat center center fixed");
       } else {
-         $("html").css("background", "url(img/"+($clue+1)+".jpg) no-repeat center center fixed").css("background-size","contain");
+         window.location.replace("https://www.someoneiswatchingyou.net/ending.html");
+         return false;
+         //$("html").css("background", "url(img/"+($clue+1)+".jpg) no-repeat center center fixed").css("background-size","contain");
       }
 
       //change to new question
