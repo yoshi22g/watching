@@ -3,7 +3,6 @@ $(document).ready(function() {
 
    //set the background image
    $("html").css("background", "url(img/map.jpg) no-repeat center center fixed").css("background-size","contain");
-   }
 
 
 
